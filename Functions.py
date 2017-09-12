@@ -1,3 +1,5 @@
+import binascii
+
 def Format(word, char = ':', lenght = 2):
     new_string = ''
     for i in range(0 ,len(word), lenght):
@@ -12,3 +14,6 @@ def IPFormatFromBin(Datos):
 
 def BinToDec(Bin):
     return str(int(Bin, 2))
+
+def ByteToHex(Bytes):
+    return str(binascii.hexlify(Bytes))
