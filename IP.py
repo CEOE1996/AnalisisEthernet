@@ -17,8 +17,8 @@ def IPv4(Datos):
                               + Dict.Divisible[Datos[49]] + ', '
                               + Dict.Fragmento[Datos[50]])
     print("Posicion de Frag:" + Datos[51:64])
-    print("Tiempo de Vida:  " + Datos[64:72])
-    print("Protocolo:       " + Datos[72:80])
+    print("Tiempo de Vida:  " + Functions.BinToDec(Datos[64:72]))
+    print("Protocolo:       " + Dict.Protocolo[Functions.BinToDec(Datos[72:80])])
     print("Checksum:        " + Datos[80:96])
     print("IP Origen:       " + Functions.IPFormatFromBin(Datos[96:128]))
     print("IP Destino:      " + Functions.IPFormatFromBin(Datos[128:160]))
