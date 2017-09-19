@@ -1,6 +1,6 @@
 import binascii, Functions, Dict
 
-with open("..\Paquetes Redes\ethernet_ipv4_icmp_redirect.bin", 'rb') as file:
+with open("..\Paquetes Redes\ethernet_ipv4_icmp.bin", 'rb') as file:
     MacDestino = Functions.ByteToHex(file.read(6))
     MacOrigen = Functions.ByteToHex(file.read(6))
     Type = Functions.ByteToHex(file.read(2))
