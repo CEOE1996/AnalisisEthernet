@@ -1,12 +1,15 @@
-import binascii, Functions, Dict
+import binascii
+from Functions import *
+from Dict import *
 
-with open("..\Paquetes Redes\ethernet_ipv4_icmp.bin", 'rb') as file:
-    MacDestino = Functions.ByteToHex(file.read(6))
-    MacOrigen = Functions.ByteToHex(file.read(6))
-    Type = Functions.ByteToHex(file.read(2))
-    Datos = Functions.ByteToHex(file.read(50))
+with open("..\Paquetes Redes\ethernet_arp_request.bin", 'rb') as file:
+    MacDestino = ByteToHex(file.read(6))
+    MacOrigen = ByteToHex(file.read(6))
+    Type = ByteToHex(file.read(2))
+    Datos = ByteToHex(file.read(50))
 
-print("Mac Destino:     " + Functions.Format(MacDestino[2:-1], ':'))
-print("Mac Origen:      " + Functions.Format(MacOrigen[2:-1], ':'))
-print("Ethertype:       " + Functions.Format(Type[2:-1], ' '))
-Dict.Ethertypes[Type[2:-1]](Datos[2:-1])
+print("Mac Destino:     " + Format(MacDestino, ':'))
+print("Mac Origen:      " + Format(MacOrigen, ':'))
+print("Ethertype:       " + Format(Type, ' '))
+print("Tipo Ethernet:   " + EtTypes[Type])
+EthertypesFn[Type](Datos)

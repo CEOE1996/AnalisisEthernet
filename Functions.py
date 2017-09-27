@@ -9,11 +9,29 @@ def Format(word, char = ':', lenght = 2):
 def IPFormatFromBin(Datos):
     new_string = ''
     for i in range(0 ,8 * 4, 8):
-        new_string += BinToDec(Datos[i:i + 8]) + '.'
+        new_string += BitToDec(Datos[i:i + 8]) + '.'
     return new_string[:-1].upper()
 
-def BinToDec(Bin):
+def IPFormatFromByte(Datos):
+    new_string = ''
+    for i in range(0 ,1 * 4, 1):
+        new_string += ByteToDec(Datos[i:i + 1]) + '.'
+    return new_string[:-1].upper()
+
+def BitToDec(Bin):
     return str(int(Bin, 2))
 
 def ByteToHex(Bytes):
-    return str(binascii.hexlify(Bytes))
+    return str(binascii.hexlify(Bytes))[2:-1]
+
+def ByteToDec(Byte):
+    return str(int.from_bytes(Byte, byteorder='big'))
+
+def HexToByte(Hex):
+    return binascii.unhexlify(Hex)#)[2:-1]
+
+def HexToBit(Hex):
+    return str(bin(int(Hex, 16))).replace("b", "")
+
+def HexToDec(Hex):
+    return str(int(Hex, 16))

@@ -1,17 +1,11 @@
-import Functions, Dict
+from Dict import *
+from Functions import *
 
-def Protocolo(Name, Datos):
-    print("Protocolo:       " + Name)
-    print("Checksum:        " + Datos[0:16])
-    print("IP Origen:       " + Functions.IPFormatFromBin(Datos[16:48]))
-    print("IP Destino:      " + Functions.IPFormatFromBin(Datos[48:80]))
+def Protocolo(Datos):
     print("Datos:           " + Datos[80:])
 
-def ICMP(Name, Datos):
-    print("Protocolo:       " + Name)
-    print("Mensaje:         " + Dict.Mensaje.get(Functions.BinToDec(Datos[0:8]), ""))
-    print("Error:           " + Dict.Error.get(Functions.BinToDec(Datos[8:16]), ""))
+def ICMP(Datos):
+    print("Tipo Mensaje:    " + Mensaje.get(BitToDec(Datos[:8]), ""))
+    print("Codigo Error:    " + Error.get(BitToDec(Datos[8:16]), ""))
     print("Checksum:        " + Datos[16:32])
-    print("IP Origen:       " + Functions.IPFormatFromBin(Datos[32:64]))
-    print("IP Destino:      " + Functions.IPFormatFromBin(Datos[64:96]))
-    print("Datos:           " + Datos[96:])
+    print("Datos:           " + Datos[32:])
