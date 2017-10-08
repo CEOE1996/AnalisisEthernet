@@ -47,3 +47,15 @@ def ARP(Datos):
 
 def EthType(Datos):
     print("Datos:           " + Format(Datos, ' '))
+
+def IPv6(Datos):
+    Datos = HexToBit(Datos)
+    print("Version:         " + BitToDec(Datos[:4]))
+    print("Clase Trafico:   " + BitToDec(Datos[4:12]))
+    print("Etiqueta Flujo:  " + BitToDec(Datos[12:32]))
+    print("Tamaño Carga:    " + BitToDec(Datos[32:48]))
+    print("Encabezado Sig:  " + BitToDec(Datos[48:56]))
+    print("Limite Salto:    " + BitToDec(Datos[56:64]))
+    print("IP Origen:       " + IPv6Format(Datos[64:192]))
+    print("IP Destino:      " + IPv6Format(Datos[192:320]))
+    print("Datos:           " + Datos[320:])

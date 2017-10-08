@@ -10,7 +10,8 @@ EthertypesFn = {
                 "0805" : EthType,
                 "0806" : ARP,
                 "0807" : EthType,
-                "8035" : ARP
+                "8035" : ARP,
+                "86dd" : IPv6
                }
 
 EtTypes = {
@@ -22,7 +23,8 @@ EtTypes = {
             "0805" : "X.25 Level 3",
             "0806" : "Address Resolution Protocol (for IP and CHAOS)",
             "0807" : "XNS Compatibility",
-            "8035" : "Reverse Address Resolution Protocol (RARP) (Stanford)"
+            "8035" : "Reverse Address Resolution Protocol (RARP) (Stanford)",
+            "86dd" : "IPv6"
           }
 
 Service = {

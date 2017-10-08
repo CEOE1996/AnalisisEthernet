@@ -18,6 +18,17 @@ def IPFormatFromByte(Datos):
         new_string += ByteToDec(Datos[i:i + 1]) + '.'
     return new_string[:-1].upper()
 
+def IPv6Format(Datos):
+    new_string = ''
+    for i in range(0 ,8 * 16, 16):
+        for j in range(0, 4 * 4, 4):
+            new_string += BitToHex(Datos[i + j:i + j + 4])
+        new_string +=  ':'
+    return new_string[:-1].upper()
+
+def BitToHex(Bit):
+    return str(hex(int(Bit, 2)))[2:]
+
 def BitToDec(Bin):
     return str(int(Bin, 2))
 
