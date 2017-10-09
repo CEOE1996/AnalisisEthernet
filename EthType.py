@@ -58,4 +58,4 @@ def IPv6(Datos):
     print("Limite Salto:    " + BitToDec(Datos[56:64]))
     print("IP Origen:       " + IPv6Format(Datos[64:192]))
     print("IP Destino:      " + IPv6Format(Datos[192:320]))
-    print("Datos:           " + Datos[320:])
+    Dict.NextHeaderFn[BitToDec(Datos[48:56])](Datos[320:])

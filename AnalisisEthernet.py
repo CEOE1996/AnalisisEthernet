@@ -2,7 +2,7 @@ import binascii
 from Functions import *
 from Dict import *
 
-with open("..\Paquetes Redes\ethernet_ipv6_nd.bin", 'rb') as file:
+with open("..\Paquetes Redes\ipv6_icmpv6_destination_unreachable.bin", 'rb') as file:
     MacDestino = ByteToHex(file.read(6))
     MacOrigen = ByteToHex(file.read(6))
     Type = ByteToHex(file.read(2))

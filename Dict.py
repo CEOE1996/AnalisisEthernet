@@ -248,3 +248,39 @@ OpCode = {
             "25"	:	"OP_EXP2",
             "65535"	:	"Reserved"
          }
+
+TipoMsj = {
+            "1"     : "Destino Inaccesible",
+            "2"     : "Paquete Demasiado Grande",
+            "3"     : "Tiempo Excedido",
+            "4"     : "Problema de Parametros"
+          }
+
+CodigoMsj = {
+                "1"     : (
+                            "No existe ruda al destino",
+                            "Comunicación con el destino administrativamente prohibida",
+                            "No asignado",
+                            "Dirección inalcanzable",
+                            "Puerto inalcanzable"
+                          ),
+                "3"     : (
+                            "Limite de saltos excedido",
+                            "Limite excedido en el reensamble del paquete"
+                          ),
+                "4"     : (
+                            "Error en el campo de encabezado",
+                            "Tipo de siguiente encabezado desconocido",
+                            "Opción IPv6 desconocida"
+                          ),
+                "128"   : (
+                            "Solicitud de Eco"
+                          ),
+                "129"   : (
+                            "Respuesta de Eco"
+                          )
+            }
+
+NextHeaderFn = {
+                 "58" : ICMPv6
+               }
