@@ -2,7 +2,7 @@ from Dict import *
 from Functions import *
 
 def Protocolo(Datos):
-    print("Datos:           " + Datos[80:])
+    print("Datos:           " + Datos)
 
 def ICMP(Datos):
     print("Tipo Mensaje:    " + Mensaje.get(BitToDec(Datos[:8]), ""))

@@ -1,16 +1,19 @@
-import binascii
 from Functions import *
 from Dict import *
+from winpcapy import WinPcap, WinPcapUtils, WinPcapDevices
 
-with open("..\Paquetes Redes\ipv6_icmpv6_destination_unreachable.bin", 'rb') as file:
-    MacDestino = ByteToHex(file.read(6))
-    MacOrigen = ByteToHex(file.read(6))
-    Type = ByteToHex(file.read(2))
-    Datos = ByteToHex(file.read(50))
 
-print("Mac Destino:     " + Format(MacDestino, ':'))
-print("Mac Origen:      " + Format(MacOrigen, ':'))
-print("Ethertype:       " + Format(Type, ' '))
-print(Type)
-print("Tipo Ethernet:   " + EtTypes[Type])
-EthertypesFn[Type](Datos)
+def Sniffer(win_pcap, param, header, data):
+    MacDestino = ByteToHex(data[:6])
+    MacOrigen = ByteToHex(data[6:12])
+    Type = ByteToHex(data[12:14])
+    Datos = ByteToHex(data[14:])
+
+    print("Mac Destino:     " + Format(MacDestino, ':'))
+    print("Mac Origen:      " + Format(MacOrigen, ':'))
+    print("Ethertype:       " + Format(Type, ' '))
+    print("Tipo Ethernet:   " + EtTypes[Type])
+    EthertypesFn[Type](Datos)
+    print("\n")
+
+WinPcapUtils.capture_on("*check*", Sniffer)
