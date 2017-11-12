@@ -2,7 +2,6 @@ from Functions import *
 from Dict import *
 from winpcapy import WinPcap, WinPcapUtils, WinPcapDevices
 
-
 def Sniffer(win_pcap, param, header, data):
     MacDestino = ByteToHex(data[:6])
     MacOrigen = ByteToHex(data[6:12])
@@ -16,4 +15,7 @@ def Sniffer(win_pcap, param, header, data):
     EthertypesFn[Type](Datos)
     print("\n")
 
-WinPcapUtils.capture_on("*check*", Sniffer)
+#with open("../Paquetes redes/ethernet_ipv4_tcp.bin", 'rb') as file:
+#    Sniffer("", "", "", file.read())
+
+WinPcapUtils.capture_on("*Oracle*", Sniffer)

@@ -107,7 +107,7 @@ FunctProtocolo = {
                     "3"   : Prot.Protocolo,
                     "4"   : Prot.Protocolo,
                     "5"   : Prot.Protocolo,
-                    "6"   : Prot.Protocolo,
+                    "6"   : Prot.TCP,
                     "7"   : Prot.Protocolo,
                     "8"   : Prot.Protocolo,
                     "9"   : Prot.Protocolo,
@@ -285,3 +285,12 @@ CodigoMsj = {
 NextHeaderFn = {
                  "58" : ICMPv6
                }
+
+Reservado = {
+                "100000" : "URG",
+                "010000" : "ACK",
+                "001000" : "PSH",
+                "000100" : "RST",
+                "000010" : "SYN",
+                "000001" : "FIN"
+            }
