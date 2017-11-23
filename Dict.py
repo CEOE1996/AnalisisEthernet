@@ -112,7 +112,7 @@ FunctProtocolo = {
                     "8"   : Prot.Protocolo,
                     "9"   : Prot.Protocolo,
                     "10"  : Prot.Protocolo,
-                    "17"  : Prot.Protocolo,
+                    "17"  : Prot.UDP,
                     "18"  : Prot.Protocolo,
                     "27"  : Prot.Protocolo,
                     "28"  : Prot.Protocolo,

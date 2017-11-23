@@ -27,7 +27,7 @@ def IPv6Format(Datos):
     return new_string[:-1].upper()
 
 def BitToHex(Bit):
-    return str(hex(int(Bit, 2)))[2:]
+    return str(hex(int(Bit, 2)))[2:].upper()
 
 def BitToDec(Bin):
     return str(int(Bin, 2))

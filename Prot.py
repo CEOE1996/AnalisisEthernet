@@ -28,3 +28,10 @@ def TCP(Datos):
     print("Checksum:        " + Datos[122:138])
     print("Puntero Urgente: " + Datos[138:154])
     print("Datos:           " + Datos[154:])
+
+def UDP(Datos):
+    print("Puerto Origen:   " + Datos[:16])
+    print("Puerto Destino:  " + Datos[16:32])
+    print("Longitud Total:  " + BitToHex(Datos[32:48]))
+    print("Checksum:        " + BitToHex(Datos[48:64]))
+    print("Datos:           " + BitToHex(Datos[64:]))
