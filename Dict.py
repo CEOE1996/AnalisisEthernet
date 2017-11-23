@@ -294,3 +294,145 @@ Reservado = {
                 "000010" : "SYN",
                 "000001" : "FIN"
             }
+
+QR = {
+        "0" : "Query",
+        "1" : "Response"
+     }
+
+AA = {
+        "0" : "Not authoritative",
+        "1" : "Is authoritative."
+     }
+
+TC = {
+        "0" : "Not truncated",
+        "1" : "Message truncated"
+     }
+
+RD = {
+        "0" : "Recursion not desired",
+        "1" : "Recursion desired"
+     }
+
+RA = {
+        "0" : "Recursive query support not available",
+        "1" : "Recursive query support available"
+     }
+
+Port = {
+            "21" 	:	"FTP",
+            "22"	:	"SSH",
+            "23"	:	"Telnet",
+            "25"	:	"SMTP",
+            "66"	:	"Oracle SQLNet",
+            "79"	:	"Finger",
+            "80"	:	"HTTP - Web",
+            "107"	:	"Remote Telnet Service",
+            "110"	:	"POP3",
+            "118"	:	"SQL Services",
+            "119"	:	"NNTP - News",
+            "137"	:	"NetBios Name Service",
+            "138"	:	"NetBios Datagram Service",
+            "139"	:	"NetBios Session Service",
+            "150"	:	"SQL-Net",
+            "161"	:	"Snmp",
+            "194"	:	"IRC - Internet Relay Chat",
+            "209"	:	"Quick Mail Protocol",
+            "217"	:	"dBASE Unix",
+            "389"	:	"NetMeeting",
+            "407"	:	"Timbuktu pro",
+            "443"	:	"HttpS",
+            "445"	:	"Microsoft-Ds",
+            "515"	:	"printer",
+            "522"	:	"NetMeeting",
+            "531"	:	"Conference",
+            "992"	:	"Telnet SSL",
+            "993"	:	"IMAP4 SSL",
+            "995"	:	"POP3 SSL",
+            "1417"	:	"Timbuktu pro",
+            "1418"	:	"Timbuktu pro",
+            "1419"	:	"Timbuktu pro",
+            "1420"	:	"Timbuktu pro",
+            "1547"	:	"LapLink",
+            "3000"	:	"Calista IP phone (saliente)",
+            "3128"	:	"Squid Proxy",
+            "3389"	:	"Microsoft Terminal Server",
+            "4099"	:	"AIM Talk",
+            "5190"	:	"Calista IP phone (entrante)",
+            "5500"	:	"VNC (Virtual Network Computing)",
+            "5631"	:	"pcAnyWhere (host)",
+            "5632"	:	"pcAnyWhere (host)",
+            "5800"	:	"VNC (Virtual Network Computing)",
+            "5900"	:	"VNC (Virtual Network Computing)",
+            "6346"	:	"SwapNut",
+            "6891"	:	"MSN Messenger (archivos)",
+            "6892"	:	"MSN Messenger (archivos)",
+            "6893"	:	"MSN Messenger (archivos)",
+            "6894"	:	"MSN Messenger (archivos)",
+            "6895"	:	"MSN Messenger (archivos)",
+            "6896"	:	"MSN Messenger (archivos)",
+            "6897"	:	"MSN Messenger (archivos)",
+            "6898"	:	"MSN Messenger (archivos)",
+            "6899"	:	"MSN Messenger (archivos)",
+            "6900"	:	"MSN Messenger (archivos)",
+            "6901"	:	"MSN Messenger (voz)",
+            "20000"	:	"ICQ",
+            "20001"	:	"ICQ",
+            "20002"	:	"ICQ",
+            "20003"	:	"ICQ",
+            "20004"	:	"ICQ",
+            "20005"	:	"ICQ",
+            "20006"	:	"ICQ",
+            "20007"	:	"ICQ",
+            "20008"	:	"ICQ",
+            "20009"	:	"ICQ",
+            "20010"	:	"ICQ",
+            "20011"	:	"ICQ",
+            "20012"	:	"ICQ",
+            "20013"	:	"ICQ",
+            "20014"	:	"ICQ",
+            "20015"	:	"ICQ",
+            "20016"	:	"ICQ",
+            "20017"	:	"ICQ",
+            "20018"	:	"ICQ",
+            "20019"	:	"ICQ"
+       }
+
+OpCodeDNS = {
+                "0"     :   "QUERY, Standard query",
+                "1"     :   "IQUERY, Inverse query",
+                "2"     :   "STATUS, Server status request",
+                "3"     :   "Reserved",
+                "4"     :   "Notify",
+                "5"     :   "Update",
+                "6"     :   "Reserved",
+                "7"     :   "Reserved",
+                "8"     :   "Reserved",
+                "9"     :   "Reserved",
+                "10"     :  "Reserved",
+                "11"     :  "Reserved",
+                "12"     :  "Reserved",
+                "13"     :  "Reserved",
+                "14"     :  "Reserved",
+                "15"     :  "Reserved"
+            }
+
+Rcode = {
+            "0" 	:	"No error. The request completed successfully",
+            "1" 	:	"Format error. The name server was unable to interpret the query",
+            "2" 	:	"Server failure. The name server was unable to process this query due to a problem with the name server",
+            "3" 	:	"Name Error. Meaningful only for responses from an authoritative name server, this code signifies that the domain name referenced in the query does not exist",
+            "4" 	:	"Not Implemented. The name server does not support the requested kind of query",
+            "5" 	:	"Refused. The name server refuses to perform the specified operation for policy reasons. For example, a name server may not wish to provide the information to the particular requester, or a name server may not wish to perform a particular operation (e.g., zone transfer) for particular data",
+            "6" 	:	"YXDomain. Name Exists when it should not",
+            "7" 	:	"YXRRSet. RR Set Exists when it should not",
+            "8" 	:	"NXRRSet. RR Set that should exist does not",
+            "9" 	:	"NotAuth. Server Not Authoritative for zone",
+            "10" 	:	"NotZone. Name not contained in zone",
+            "11" 	:	"Reserved",
+            "12" 	:	"Reserved",
+            "13" 	:	"Reserved",
+            "14" 	:	"Reserved",
+            "15" 	:	"Reserved"
+        }
