@@ -14,19 +14,19 @@ def ICMP(Datos):
 def ICMPv6(Datos):
     print("Tipo Mensaje:    " + Dict.TipoMsj.get(BitToDec(Datos[:8]), ""))
     print("Codigo Error:    " + Dict.CodigoMsj[BitToDec(Datos[:8])][int(BitToDec(Datos[8:16]))])
-    print("Checksum:        " + Datos[16:32])
+    print("Checksum:        " + BitToHex(Datos[16:32]))
     print("Datos:           " + BitToHex(Datos[32:]))
 
 def TCP(Datos):
     print("Puerto Origen:   " + Dict.Port.get(BitToDec(Datos[:16]), ""))
     print("Puerto Destino:  " + Dict.Port.get(BitToDec(Datos[16:32]), ""))
-    print("Num Secuencia:   " + Datos[32:64])
-    print("Acuse Recibo:    " + Datos[64:96])
-    print("Margen de Datos: " + Datos[96:100])
+    print("Num Secuencia:   " + BitToHex(Datos[32:64]))
+    print("Acuse Recibo:    " + BitToHex(Datos[64:96]))
+    print("Margen de Datos: " + BitToHex(Datos[96:100]))
     print("Reservado:       " + Dict.Reservado.get(Datos[100:106], ""))
-    print("Ventana:         " + Datos[106:122])
-    print("Checksum:        " + Datos[122:138])
-    print("Puntero Urgente: " + Datos[138:154])
+    print("Ventana:         " + BitToHex(Datos[106:122]))
+    print("Checksum:        " + BitToHex(Datos[122:138]))
+    print("Puntero Urgente: " + BitToHex(Datos[138:154]))
     print("Datos:           " + BitToHex(Datos[154:]))
 
 def UDP(Datos):
@@ -45,7 +45,7 @@ def UDP(Datos):
     print("Z:               " + Datos[89:90])
     print("AD:              " + Datos[90:91])
     print("CD:              " + Datos[91:92])
-    print("RCode:           " + Dict.Rcode[BitToHex(Datos[92:96])])
+    print("RCode:           " + Dict.Rcode[BitToDec(Datos[92:96])])
     print("Total Questions: " + BitToDec(Datos[96:112]))
     print("Total Answer:    " + BitToDec(Datos[112:128]))
     print("Total Authority: " + BitToDec(Datos[128:144]))

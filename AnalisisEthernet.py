@@ -15,7 +15,7 @@ def Sniffer(win_pcap, param, header, data):
     EthertypesFn[Type](Datos)
     print("\n")
 
-with open("../Paquetes redes/ethernet_ipv4_udp_dns.bin", 'rb') as file:
-    Sniffer("", "", "", file.read())
+#with open("../Paquetes redes/ethernet_ipv4_udp_dns.bin", 'rb') as file:
+#    Sniffer("", "", "", file.read())
 
-#WinPcapUtils.capture_on("*Oracle*", Sniffer, 2)
+WinPcapUtils.capture_on("*Ether*", Sniffer, 20)
